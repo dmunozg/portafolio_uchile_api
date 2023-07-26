@@ -1,0 +1,18 @@
+[project]
+name = "portafolio_uchile_api"
+version = "0.0.1"
+authors = [
+    { name="Diego Muñoz G.", email="diego.munoz.g@ug.uchile.cl"}
+]
+description = "Modulo para extraer información del portafolio académico de la Universidad de Chile"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
