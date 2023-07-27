@@ -96,4 +96,7 @@ class PortafolioAPI:
             headers=self.headers,
             data={},
         )
+        if response.status_code != 200:
+            print(f"Error {response.status_code}")
+            return None
         return response.json()["data"]["academicos"][0]["publicaciones"]
