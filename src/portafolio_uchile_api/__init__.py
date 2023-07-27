@@ -100,3 +100,15 @@ class PortafolioAPI:
             print(f"Error {response.status_code}")
             return None
         return response.json()["data"]["academicos"][0]["publicaciones"]
+
+    def query_proyectos(self, academicoID):
+        response = requests.request(
+            "GET",
+            self.base_url + f"/proyectos?id_persona={academicoID}",
+            headers=self.headers,
+            data={},
+        )
+        if response.status_code != 200:
+            print(f"Error {response.status_code}")
+            return None
+        return response.json()["data"]["academicos"]["proyectos"]
